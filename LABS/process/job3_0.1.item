@@ -2,6 +2,8 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
@@ -103,4 +105,49 @@
     <routinesParameter id="_8u8tkNukEeew6O9IRME_TQ" name="TalendStringUtil"/>
     <routinesParameter id="_8usO4NukEeew6O9IRME_TQ" name="TalendString"/>
   </parameters>
+  <node componentName="tMondrianInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="352" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMondrianInput_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="mondrian_2.jar"/>
+    <elementParameter field="CLOSED_LIST" name="DBTYPE" value="Access"/>
+    <elementParameter field="CLOSED_LIST" name="ORACLETYPE" value="Oracle SID" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="JAVADBFRAME" value="Embeded" show="false"/>
+    <elementParameter field="CHECK" name="JAVADBNETSERVER" value="false" show="false"/>
+    <elementParameter field="FILE" name="ACCESSDBNAME" value="&quot;C:/Users/Administrator/workspace/in.mdb&quot;"/>
+    <elementParameter field="DIRECTORY" name="DBPATH" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="HSQLMODE" value="SERVER" show="false"/>
+    <elementParameter field="CHECK" name="TLS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;50000&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HSQLDATABASEALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="HSQLDATABASEPATH" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HSQLDATABASE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="INTERBASEDBNAME" value="&quot;../test.gdb&quot;" show="false"/>
+    <elementParameter field="FILE" name="SQLITEDBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="FILE" name="FIREBIRDDBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="INFORMIXSERVER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE="/>
+    <elementParameter field="TEXT" name="CATALOG" value="&quot;file:catalog.xml&quot;"/>
+    <elementParameter field="MEMO" name="QUERY" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tMondrianInput_1"/>
+  </node>
+  <node componentName="tPaloClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="224" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPaloClose_1" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMondrianInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPaloClose_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
 </talendfile:ProcessType>
